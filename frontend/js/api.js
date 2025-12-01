@@ -1,4 +1,5 @@
-const API_BASE = "http://127.0.0.1:5000";
+const API_BASE = "https://projeto-wayne-security-system-7.onrender.com";
+
 
 function getStoredTokens() {
     const access = (localStorage.getItem("token") || "").replace(/\s+/g, "").replace(/^<|>$/g, "") || null;
