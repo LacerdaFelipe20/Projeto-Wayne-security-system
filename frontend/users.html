@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wayne Security - Usuários</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/users.css">
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="users.html" class="active">Usuários</a></li>
+            <li><a href="resources.html">Recursos</a></li>
+            <li><a href="logs.html">Logs</a></li>
+            <li><a href="settings.html">Configurações</a></li>
+            <li><a href="login.html">Sair</a></li>
+        </ul>
+    </nav>  
+
+    <main>
+        <h1>Usuários</h1>
+
+        <section>
+            <h2>Cadastrar Novo Usuário</h2>
+            <form id="form_cadastro_usuario">
+                <label for="input_nome">Nome</label>
+                <input type="text" id="input_nome" placeholder="Nome" required>
+                <label for="input_email">Email</label>
+                <input type="email" id="input_email" placeholder="Email" required>
+                <label for="input_senha">Senha</label>
+                <input type="password" id="input_senha" placeholder="Senha" required>
+                <button type="button" id="btn_cadastrar_usuario">Cadastrar</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Lista de Usuários</h2>
+            <table> 
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Função</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela_usuarios">
+
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="./js/api.js"></script>    
+    <script src="./js/users.js"></script>
+</body>
+</html>

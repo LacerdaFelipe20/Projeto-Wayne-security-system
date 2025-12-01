@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <title>Wayne Security - Recursos</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/resources.css">
+</head>
+<body>
+    <body>
+    <nav>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="users.html">Usuários</a></li>
+            <li><a href="resources.html" class="active">Recursos</a></li>
+            <li><a href="logs.html">Logs</a></li>
+            <li><a href="settings.html">Configurações</a></li>
+            <li><a href="login.html">Sair</a></li>
+        </ul>
+    </nav> 
+
+    <main style="padding:18px; max-width:1100px; margin:auto;">
+        <h1>Recursos</h1>
+
+    <div class="toolbar">
+        <input id="filter-type" placeholder="Filtrar por tipo" />
+        <select id="filter-status">
+            <option value="">Todos os status</option>
+            <option value="disponível">Disponível</option>
+            <option value="em uso">Em uso</option>
+        </select>
+        <button id="btn-filter" class="btn small">Filtrar</button>
+
+    <div style="margin-left:auto; display:flex; gap:8px;">
+        <button id="btn-refresh" class="btn small">Atualizar</button>
+        <button id="btn-open-create" class="btn primary small">Cadastrar Recurso</button>
+    </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+            <th>ID</th><th>Nome</th><th>Tipo</th><th>Status</th><th>Descrição</th><th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="tabela-recursos"></tbody>
+    </table>
+    </main>
+
+    <div id="modal-backdrop" class="modal-backdrop" role="dialog" aria-hidden="true">
+        <div class="modal" role="document">
+            <h3 id="modal-title">Cadastrar Recurso</h3>
+            <div class="form-row">
+            <input id="field-name" placeholder="Nome" />
+            <input id="field-type" placeholder="Tipo" />
+        </div>
+        <div class="form-row">
+            <select id="field-status">
+                <option value="disponível">Disponível</option>
+                <option value="em uso">Em uso</option>
+                <option value="manutenção">Manutenção</option>
+            </select>
+            <input id="field-id" type="hidden" />
+        </div>
+        <div style="margin-bottom:8px;">
+            <textarea id="field-description" rows="3" placeholder="Descrição (opcional)" style="width:100%; padding:8px;"></textarea>
+        </div>
+        <div class="modal-footer">
+            <button id="btn-cancel-modal" class="btn">Cancelar</button>
+            <button id="btn-save-modal" class="btn primary">Salvar</button>
+        </div>
+    </div>
+    </div>
+
+>
+    <script src="js/api.js"></script>
+    <script src="js/resources.js"></script>
+</body>
+</html>

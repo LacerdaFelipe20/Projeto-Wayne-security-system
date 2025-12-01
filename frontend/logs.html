@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Wayne Security - Logs</title>
+    <link rel="stylesheet" href="./css/style.css"> 
+    <link rel="stylesheet" href="./css/logs.css">  
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="users.html">Usuários</a></li>
+            <li><a href="resources.html">Recursos</a></li>
+            <li><a href="logs.html" class="active">Logs</a></li>
+            <li><a href="settings.html">Configurações</a></li>
+            <li><a href="login.html">Sair</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Logs do Sistema</h1>
+
+        <section>
+            <h2>Filtrar Logs</h2>
+                <form id="form-filtro-logs">
+                    <input type="text" id="filtro-usuario" placeholder="Usuário">
+                    <input type="text" id="filtro-acao" placeholder="Ação">
+                    <button type="button" id="btn-filtrar-logs">Filtrar</button>
+                </form>
+        </section>
+
+    <section>
+        <h2>Lista de Logs</h2>
+        <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Usuário</th>
+                <th>Ação</th>
+                <th>Recurso</th>
+                <th>Data/Hora</th>
+            </tr>
+        </thead>
+        <tbody id="tabela-logs">
+
+        </tbody>
+        </table>
+    </section>
+    </main>
+
+<script src="./js/api.js"></script>
+<script src="./js/logs.js"></script>
+</body>
+</html>

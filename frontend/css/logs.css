@@ -1,0 +1,20 @@
+#form-filtro-logs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+#form-filtro-logs input {
+    flex: 1 1 200px;
+}
+
+#tabela-logs tr:hover {
+    background-color: #f0f8ff;
+}
+
+.mensagem-vazia {
+    color: #7f8c8d;
+    font-style: italic;
+    padding: 10px;
+}

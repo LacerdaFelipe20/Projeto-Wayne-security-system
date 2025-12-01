@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Wayne Security - Dashboard</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
+</head>
+<body>
+    <header class="navbar">
+        <h2>Wayne Security</h2>
+        <nav>
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="users.html">Usuários</a>
+            <a href="resources.html">Recursos</a>
+            <a href="logs.html">Logs</a>
+            <a href="settings.html">Configurações</a>
+            <a href="login.html">Sair</a>
+        </nav>
+    </header>
+
+
+    <main class="dashboard-container">
+        <h1>Dashboard de Segurança</h1>
+
+
+        <section id="indicadores">
+            <div class="card">
+                <h2>Total de Usuários</h2>
+                <p id="userCount">0 cadastrados</p>
+            </div>
+            <div class="card">
+                <h2>Recursos em Uso</h2>
+                <p id="resourceCount">0 ativos</p>
+            </div>
+            <div class="card">
+                <h2>Ações Recentes</h2>
+                <p id="logCount">0 registros</p>
+            </div>
+        </section>
+
+    <section class="notifications">
+        <h2>Notificações Recentes</h2>
+            <ul id="notificationList">
+                <li>Nenhuma notificação</li>
+            </ul>
+    </section>
+
+    <section class="painel-extra">
+        <h2>Painel Geral</h2>
+        <p id="usuariosPainel">Total: 0</p>
+        <p id="recursosPainel">Total: 0</p>
+        <p id="logsPainel">Total: 0</p>
+    </section>
+
+
+    <footer>
+        <p>Usuário logado: <span id="userEmail">Usuário</span></p>
+    </footer>
+    </main>
+    
+    <script src="./js/api.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

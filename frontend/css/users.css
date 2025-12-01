@@ -1,0 +1,42 @@
+#tabela_usuarios tr:hover {
+    background-color: #f0f8ff;
+}
+
+#form_cadastro_usuario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+#form_cadastro_usuario input {
+    flex: 1 1 200px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#form_cadastro_usuario button {
+    padding: 8px 12px;
+    background-color: #2c3e50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#form_cadastro_usuario button:hover {
+    background-color: #34495e;
+}
+
+.mensagem_sucesso {
+    color: #27ae60;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.mensagem_erro {
+    color: #c0392b;
+    font-weight: bold;
+    margin-top: 10px;
+}

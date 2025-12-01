@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Wayne Security - Configurações</title>
+    <link rel="stylesheet" href="./css/style.css"> 
+    <link rel="stylesheet" href="./css/settings.css"> 
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="users.html">Usuários</a></li>
+            <li><a href="resources.html">Recursos</a></li>
+            <li><a href="logs.html">Logs</a></li>
+            <li><a href="settings.html" class="active">Configurações</a></li>
+            <li><a href="login.html">Sair</a></li>
+
+            <li style="margin-left: auto;">
+                <button id="themeToggle" class="theme-btn" aria-label="Alternar tema">
+                <img id="themeIcon" src="./img/5878264.png" alt="tema">
+                </button>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Configurações</h1>
+
+        <section>
+            <h2>Alterar Senha</h2>
+            <form id="form_senha">
+                <input type="password" id="senha_atual" placeholder="Senha atual">
+                <input type="password" id="nova_senha" placeholder="Nova senha">
+                <input type="password" id="confirmar_senha" placeholder="Confirmar nova senha">
+                <button type="button" id="btn_alterar_senha">Salvar</button>
+            </form>
+            <p id="mensagem_senha"></p>
+        </section>
+    </main>
+
+<script src="./js/settings.js"></script>
+</body>
+</html>
