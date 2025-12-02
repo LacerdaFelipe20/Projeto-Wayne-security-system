@@ -12,4 +12,4 @@ services:
       python -m pip list --format=columns | head -n 30 &&
       echo "== where gunicorn (if any) ==" &&
       which gunicorn || python -m pip show gunicorn
-    startCommand: python -m gunicorn "app:create_app()" --chdir app --bind 0.0.0.0:$PORT
+startCommand: gunicorn app:create_app --bind 0.0.0.0:$PORTT
