@@ -24,6 +24,15 @@ def register():
 @bp.route('', methods=['GET'])
 @jwt_required()
 def get_users():
+    current_user = get_jwt_identity()
+    user = User.query.get(current_user)
+
+    if not user:
+        return jsonify({"message": "Usuário não encontrado"}), 404
+    
+    if user.role != "admin":
+        return jsonify({"message": "Acesso negado"}), 403
+
     users_list = User.query.all()
     result = []
     for user in users_list:
@@ -34,6 +43,7 @@ def get_users():
             'role': user.role
         })
     return jsonify(result), 200
+
 
 @bp.route('/<int:user_id>', methods=['DELETE'])
 @jwt_required()

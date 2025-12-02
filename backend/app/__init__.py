@@ -15,7 +15,7 @@ def create_app():
     load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '..', '..', '.env'))
     app = Flask(__name__, static_folder="../frontend", static_url_path="/")
     
-    app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'dev-secret-key')
+    app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', '40028922flb2005')
 
     db_uri = os.getenv('DATABASE_URL') or os.getenv('SQLALCHEMY_DATABASE_URI') or "sqlite:///dev.db"
     app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
@@ -48,4 +48,8 @@ def create_app():
 
     from . import models  # noqa: F401
 
+    with app.app_context():
+        db.create_all()
+
     return app
+

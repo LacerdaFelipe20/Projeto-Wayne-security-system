@@ -11,7 +11,6 @@ async function carregarUsuarios() {
     tabela.innerHTML = "";
 
     try {
-        
         const data = await apiFetch(API);
 
         if (!Array.isArray(data)) {
