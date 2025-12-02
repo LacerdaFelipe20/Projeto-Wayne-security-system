@@ -5,7 +5,7 @@ Inclui autenticação JWT, cadastro e controle de usuário, gerenciamento de rec
 
 Links de acesso:
 Backend(api): https://projeto-wayne-security-system.onrender.com 
-Frontend(web): projeto-wayne-security-syste-git-3a13ed-lacerdafelipes-projects.vercel.app 
+Frontend(web): https://projeto-wayne-security-syste-git-3a13ed-lacerdafelipes-projects.vercel.app 
 
 Tecnologias utilizadas:
 Backend:
@@ -57,6 +57,7 @@ senha:123456
 
 Feito por Felipe Lacerda Barbosa  
 Projeto desenvolvido Fullstack 2025
+
 
 
 
