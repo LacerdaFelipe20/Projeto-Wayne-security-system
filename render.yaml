@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: wayne-security
+    env: python
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: gunicorn "app:create_app()"
+    rootDir: backend
