@@ -2,6 +2,14 @@ services:
   - type: web
     name: wayne-security
     env: python
-    buildCommand: pip install -r backend/requirements.txt
-    startCommand: gunicorn "app:create_app()"
     rootDir: backend
+    buildCommand: >
+      python -m pip install -r requirements.txt &&
+      echo "== pip, python version ==" &&
+      python -V &&
+      python -m pip --version &&
+      echo "== pip list (top) ==" &&
+      python -m pip list --format=columns | head -n 30 &&
+      echo "== where gunicorn (if any) ==" &&
+      which gunicorn || python -m pip show gunicorn
+    startCommand: python -m gunicorn "app:create_app()" --chdir app --bind 0.0.0.0:$PORT
